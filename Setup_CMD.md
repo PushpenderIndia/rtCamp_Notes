@@ -33,6 +33,8 @@ brew install wget
 ```
 brew install gh
 gh auth login
+git config --global user.name "Pushpender Singh"
+git config --global user.email "singhpushpender250@gmail.com"
 ```
 
 # Install LocalWP
