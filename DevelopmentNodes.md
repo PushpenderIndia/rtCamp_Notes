@@ -83,3 +83,36 @@ For above tree output, install `tree` using `brew install tree`
 ## Curl Issue 2 - Gettting 406 Error
 I've removed the `Accepted-Type` Header from the Curl setting, which might have unexpected return type
 
+## Fixing CronJob Issue
+For using CronJob using Local, Following are the steps:
+- e.g. `cron.sh`
+```
+
+export PHPRC="/Users/pushpendersingh/Library/Application Support/Local/run/tyIV1TiTF/conf/php"
+"/Users/pushpendersingh/Library/Application Support/Local/lightning-services/php-8.1.29+0/bin/darwin-arm64/bin/php" "/Users/pushpendersingh/Local Sites/ghtimeline/app/public/cron/check_updates.php"
+```
+- First line should be declaration of `PHPRC` variable 
+- For finding this `tyIV1TiTF` variable name, Open `Site Shell` from `LocalWP`
+- In `Site Shell`, you will get following output
+```
+Last login: Wed Jul 24 18:08:12 on ttys009
+You have new mail.
+/Users/pushpendersingh/Library/Application\ Support/Local/ssh-entry/tyIV1TiTF.sh
+➜  ~ /Users/pushpendersingh/Library/Application\ Support/Local/ssh-entry/tyIV1TiTF.sh
+-n -e 
+Setting Local environment variables...
+----
+WP-CLI:   WP-CLI 2.10.0
+Composer: 2.6.2 2023-09-03
+PHP:      8.1.29
+MySQL:    mysql  Ver 8.0.16 for macos10.14 on x86_64 (MySQL Community Server - GPL)
+----
+Launching shell: /bin/zsh ...
+➜  public git:(gh-timeline-code) 
+```
+- So from this path `/Users/pushpendersingh/Library/Application\ Support/Local/ssh-entry/tyIV1TiTF.sh` we need to create following path
+```
+/Users/pushpendersingh/Library/Application Support/Local/run/tyIV1TiTF/conf/php
+```
+- Then find the PHP path using this command: `which php`
+- NOTE: Make sure to use full path in crontab
