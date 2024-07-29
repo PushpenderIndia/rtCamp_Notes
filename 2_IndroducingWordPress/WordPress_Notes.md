@@ -52,4 +52,15 @@ sudo lsof -i:80; sudo lsof -tnP -i:80 | xargs -n 1 ps -p
 kill -9 <PID>
 ```
 
+### How to Create Astra theme WordPress site
+1. Once WordPress is installed, click on `WP Admin` from LocalWP
+2. Click on `Appearance` > `Themes` > `Add New Theme` > Search `astra` 
+3. Click on `Install` & then `Activate` this theme
+4. Delete other default themes
+5. Click on `Plugins` > `Add New Plugin` > Search `starter template`
+6. Click on `Install` & then `Activate` this plugin
+
+- Detailed Walkthrough: [YouTube Video Link](https://www.youtube.com/watch?v=gjLa-FT7JWg)
+
+
 
