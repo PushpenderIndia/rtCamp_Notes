@@ -62,5 +62,78 @@ kill -9 <PID>
 
 - Detailed Walkthrough: [YouTube Video Link](https://www.youtube.com/watch?v=gjLa-FT7JWg)
 
+### Customizing WordPress Plugins
+- In WordPress, themes are used to alter appearance of site
+- Plugins are used to extend WordPress's functionality
 
+1. Finding & Installing Plugins
+```
+Navigate to Plugins > Add New > Search for plugins
+```
+2. Checking Compatibility of New Plugins
+```
+Each plugin description includes a note that reads "Compatible with your version of WordPress” or “Untested with your version of WordPress.”
 
+Click on "More Details" to see info about plugin's compatibility
+```
+
+3. Installing Plugins
+```
+There are 3 ways:
+```
+
+    1. **Automatic Plugin Installation**: 
+        - Any plugin available in the WordPress Plugins Directory can be installed via the built-in plugin installer.
+        - Navigate to `Plugins > Add New`
+        - Use search bar for finding plugin
+        - Click on `Install Now`
+        - Once plugin is installed, click on `Activate`
+
+    2. **Upload via WordPress Admin**: 
+        -   You can easily add a new plugin by uploading a zip archive of the plugin from your local computer.
+        - Navigate to `Plugins > Add New`
+        - Click `Upload Plugin`
+        - Select plugin zip file from local file system
+        - Click on `Install Now`
+        - Once plugin is installed, click on `Activate`
+
+    3. **Manual Plugin Installation**: 
+        -  In some cases, you may need to manually upload a plugin directly using an SFTP client.
+        - Download plugin zip from [WordPress Plugin Directory](https://wordpress.org/plugins/) & unzip it locally
+        - Transfer the extracted folder to `wp-content/plugins` directory of your WP via SFTP or remote file manager
+        - From Plugins menu in Admin Screen, click `Activate` 
+
+4. Updating Plugins
+    - Manual Plugin Update from Dashboard
+        ```
+        WP Dashboard automatically notifies when plugin update is available
+        ```
+        - Click on `Dashboard -> Updates`
+        - Scroll down to Plugin Section
+        - Select checkbox & click `Update Plugins` button
+
+    - Enable Automatic Plugin Update
+        - Go to `Plugin -> Installed Plugins`
+        - In the `Automatic Updates` column, there is button to `Enable auto-updates`
+
+    - Disable Automatic Plugin Update
+        - Go to `Plugin -> Installed Plugins`
+        - In the `Automatic Updates` column, there will be a button to `Disable auto-updates`, if plugin was set to auto-updates
+
+5. Uninstalling Plugins
+    - Deactivate the plugin from `Plugins` section
+    - Then you will see a option to `Delete` it
+
+### Customizing WordPress Theme
+1. Get New Theme
+    - Click on `Appearence -> Themes -> Add New`
+    - Either search for a free theme from Dashboard
+    - Or you can upload a zip file 
+
+2. Adding New Themes by using cPanel
+    - Download theme in .zip format
+    - In `cPanel File Manager`, navigate to themes folder i.e. `/wp-content/themes/`
+    - Uploas & Unzip the theme file
+
+3. Activating the Theme
+    - Click on `Appearence -> Themes -> Click on Activate`
