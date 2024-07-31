@@ -164,3 +164,48 @@ There are 3 ways:
 - **Sidebar**: A location on your website where you typically display elements like the search bar, recent and popular posts, and other important widgets. A website can have more than one sidebar.
 - **Toolbar**: The small black bar just above your site that provides quick links to various parts of your website, usually visible only to logged-in users.
 - **XML-RPC**: A remote procedure call (RPC) protocol that uses XML to encode its calls and HTTP as a transport mechanism.
+
+### FSE (Full Site Editing) Introduction
+- Introduced in WordPress 5.9
+- Focuses on User Editability of Different site templates without making any changes in code
+- Umbrella project name for various sub-projects within Gutenberg
+
+```
+Core Concepts of FSE are:
+```
+1. Site Editor
+    - Used for building a site using blocks, layouts, templates, menus etc
+    - Supported in Block Themes
+    - Go to `Appearance > Editor` to open the Site Editor
+
+2. Blocks
+    - Individual & Customizable components of template or page
+    - Can Build a page, post, template etc, by combining multiple blocks together
+
+3. Templates
+    - A list of block items collectively is known as a template
+    - Can be used for page, post, archive, etc
+
+4. Block themes
+    - Themes which support blocks & can be edited with Site Editor are called block themes
+    - Contains `theme.json` file that can be used to configure theme support & options
+
+### Multisite / Network
+
+- WordPress allows us to set up a Network of sites using same core files but with different login credentials & separate dashboards.
+
+- Each site is independent of each other but can be managed from one place by Network Admin (aka Super Admin)
+
+- Feature can be enabled by adding 1 line of code in `wp-config.php`
+
+### Using Multisite WordPress Environment
+
+1. Open LocalWP & Create a fresh site
+2. In the third step of `Set up WordPress`, there is a option to enable MultiSite
+3. From the dropdown `Is this a WordPress Multisite?` either select `Yes - Subdirectory` or `Yes - Subdomain`
+
+4. Types of Multisite
+    - Subdirectory Multisite - e.g. `myproject.local/site-1-name/`
+    - Subdomain Multisite - e.g. `site-1-name.myporject.local`
+
+
