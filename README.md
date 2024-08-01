@@ -12,5 +12,8 @@
     - [JavaScript Quiz](1_EngineeringBasics/JavaScript_Quiz.md)
 
 - Introducing WordPress
-    - [WordPress Notes](2_IndroducingWordPress/WordPress_Notes.md)
+    - [WordPress Notes](2_IntroducingWordPress/WordPress_Notes.md)
+
+- Testing
+    - [Testing Notes](3_Testing/)
 
