@@ -2,6 +2,7 @@
 
 ### Table of Content
 - [Introduction to PHP Unit Testing](#introduction-to-php-unit-testing)
+- [Overview of PHP Testing](#overview-of-php-testing)
 
 ### Introduction to PHP Unit Testing
 
@@ -152,4 +153,20 @@ Comment out the excluded test from the phpunit.xml.dist file.
 ./vendor/bin/phpunit 
 ```
 
+## Overview of PHP Testing
 
+Testing in PHP is crucial for ensuring high-quality code and preventing the introduction of bugs with new features. It can be divided into three main categories:
+
+1. **Unit Testing:** This involves testing individual components, such as functions or classes, in isolation. The goal is to ensure each unit of the software performs as expected.
+
+2. **Integration Testing:** This type of testing focuses on verifying the interactions between different units or components of the application. It combines multiple units to test them together.
+
+3. **End-to-End (E2E) Testing:** E2E testing examines the entire application flow from start to finish. It simulates real user scenarios to ensure the complete system functions correctly. This is also known as UI testing.
+
+**Testing Tools**
+
+- **PHPUnit:** A tool for unit testing in PHP.
+- **Pest:** Offers a syntax similar to Jest, which is used in JavaScript.
+- **Codeception:** Useful for E2E testing, especially with WordPress.
+- **Cypress:** An effective tool for E2E testing, primarily in JavaScript environments.
+- **Playwright:** A newer tool compatible with PHP and WordPress for E2E testing.
