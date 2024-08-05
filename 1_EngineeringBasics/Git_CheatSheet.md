@@ -49,7 +49,7 @@ git merge
 # Uploads local changes to GitHub
 git push
 
-# Upload local repo with all new commits from remote branch
+# Updates the local repo with all new commits from remote branch
 git pull
 ```
 
