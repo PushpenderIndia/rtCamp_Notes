@@ -17,5 +17,4 @@
 - Testing
     - [Testing Notes](3_Testing/Testing_Notes.md)
     - [Writing Unit Test from Scratch](3_Testing/Unit_Testing_From_Scratch.md)
-    - [Installing WP-CLI](3_Testing/Installing_WPCLI.md)
 

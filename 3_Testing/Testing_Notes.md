@@ -14,7 +14,14 @@
 2. Knowledge of writing basic PHPUnit Test
 3. Using Composer & NPM
 
-### PHPUnit Installation Guides
+### PHPUnit Installation Guides (Stackoverflow) - Recommended
+```
+curl https://phar.phpunit.de/phpunit.phar -L -o phpunit.phar
+chmod +x phpunit.phar
+sudo mv phpunit.phar /usr/local/bin/phpunit
+```
+
+### PHPUnit Installation Guides (rtCamp LMS)
 
 1. Core PHPUnit setup
     - Add a (development-time) dependency on phpunit/phpunit to project’s composer.json file 
@@ -23,6 +30,35 @@
 2. Run PHPUnit tests 
     - Run PHPUnit tests by running the command from plugin root directory.
     -  `./vendor/bin/phpunit`
+
+## WP-CLI Intro
+- Powerful command-line tool for managing WordPress installations. 
+- Allows developers to perform various administrative tasks without the need for a browser.
+
+1. Installing using brew
+```
+brew install wp-cli
+```
+
+2. Verifying Installation
+```
+wp --info
+```
+
+3. Useful commands
+```
+// Update WordPress Core
+wp core update
+ 
+// Install a plugin
+wp plugin install <plugin-slug>
+ 
+// Activate a plugin
+wp plugin activate <plugin-slug>
+ 
+// Run unit tests
+wp scaffold plugin-tests <plugin-slug>
+```
 
 ### WP-PHPUnit Setup with WP-CLI
 
@@ -78,41 +114,7 @@ zsh ./bin/install-wp-tests.sh <db-name> <db-user> <db-pass> [db-host] [wp-versio
 
 This will create a test DB & create a new WP installation in /tmp
 
-NOTE: If your WP-CLI verison is same or higher than 2.10.0, you can directly go to the step 3.
-
-5. Run the following command, to get the WP CLI version.
-```
-wp --version
-```
-
-Note: For Local by Flywheel, need to edit `./install-wp-test.php` to make it work with WPLocal’s DB, 
-
-Adding full `–user` & `–password` parameters to make it compatible with the WPLocal site shell.
-
-Make the following changes
-
-- Change 1: In recreate_db() function
-
-Replace with 
-```
-mysqladmin drop $DB_NAME -f --user="$DB_USER" --password="$DB_PASS"$EXTRA
-```
-
-- Change 2: In create_db() function 
-
-Replace with
-```
-mysqladmin create $DB_NAME --user="$DB_USER" --password="$DB_PASS"$EXTRA
-```
-
-- Change 3: In install_db() function
-
-Replace with
-```
-mysql --user="$DB_USER" --password="$DB_PASS"$EXTRA --execute='show databases;' | grep ^$DB_NAMES
-```
-
-#### Step 3:
+#### Step 3: Optional If Installed PHPUnit Globally
 Install phpunit as project dependencies:
 ```
 composer require --dev phpunit/phpunit
@@ -151,6 +153,8 @@ Comment out the excluded test from the phpunit.xml.dist file.
 #### Step 6: Run in plugin root:
 ```
 ./vendor/bin/phpunit 
+# OR
+phpunit
 ```
 
 ## Overview of PHP Testing
