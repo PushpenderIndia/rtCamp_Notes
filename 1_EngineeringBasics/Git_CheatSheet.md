@@ -71,7 +71,7 @@ git show [commit]
 git add [file]
 
 # Records file snapshots permanently in version history
-git commit -m  "[descriptive msg]
+git commit -m  "[descriptive msg]"
 
 # Modify the last commit with current index changes
 git commit --amend
