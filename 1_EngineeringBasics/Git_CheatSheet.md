@@ -11,7 +11,7 @@
 git branch [branch-name]
 
 # Switch to specific branch
-git checkout
+git checkout [branch-name]
 
 # Merge Current Branch with a particular branch
 git merge [branch]
