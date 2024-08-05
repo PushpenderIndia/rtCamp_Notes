@@ -17,4 +17,5 @@
 - Testing
     - [Testing Notes](3_Testing/Testing_Notes.md)
     - [Writing Unit Test from Scratch](3_Testing/Unit_Testing_From_Scratch.md)
+    - [Writing Unit Tests for WordPress Plugins & Themes](3_Testing/Write_UnitTests_For_WP_Plugin_Themes.md)
 
